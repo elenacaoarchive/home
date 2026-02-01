@@ -176,7 +176,7 @@ body
 	height: 100vh;
 /*	background-color: #A6A6A6;*/
     background-color: #252525;
-	background-image: url(img/works/personality/cover1.png);
+	background-image: url(img/works/AirLink/cover.png);
 	background-size: cover;
     z-index: -1;
 }
@@ -301,7 +301,10 @@ a#scroll-btn:before {
 
 .select {
 	background-color: rgb(247, 238, 231, 1.0);
-	transition: 0.5s ease-in-out;
+  background-size: cover;          /* 让背景图铺满 */
+  background-position: center;      /* 背景居中 */
+  transition: 0.5s ease-in-out;    /* 控制背景切换的平滑度 */
+  position: relative
 }
 
 .selectcontainer {
@@ -321,9 +324,22 @@ a#scroll-btn:before {
 
 }
 
-.select:has(a:hover){
-	background-color: grey;
-	transition: 0.5s ease-in-out;
+/* 当鼠标悬停在“左侧链接”上时，改变父级 .select 的背景 */
+.select:has(.previous a:hover) {
+    background-image: url('img/works/AirLink/cover.png'); /* 替换为图片1 */
+    background-color: grey; /* 备用色 */
+}
+
+/* 当鼠标悬停在“右侧链接”上时，改变父级 .select 的背景 */
+.select:has(.next a:hover) {
+    background-image: url('你的图片路径2.jpg'); /* 替换为图片2 */
+    background-color: darkgrey; /* 备用色 */
+}
+
+/* 为了文字清晰，悬停时可以给文字加个亮色或者阴影 */
+.select:has(a:hover) a {
+    color: white; /* 悬停时文字变白，防止背景太深看不清 */
+    text-shadow: 0px 2px 10px rgba(0,0,0,0.5);
 }
 
 
