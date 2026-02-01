@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8" />
+   <meta HTTP-EQUIV="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+   <title>Project</title>
+   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+   <link rel="stylesheet" type="text/css" href="project.css">
+   <script src="script.js" defer></script>
+   <script src="iconfont.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <!-- nav  -->
+    <header class="header">
+        <nav class="menu container">
+            <div class="logo left">
+               <h2><a href="index.html">PEIYAO CAO</a></h2>
+            </div>
+
+            <div class="link right">
+                <ul>
+                   <li><a href="/index.html">HOME</a></li>
+                   <li><a href="#">WORKS</a></li>
+                   <li><a href="">BLOG</a></li>
+                   <li><a href="/about.html">ABOUT</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+   <section class="background">
+      <!-- here is the barkground image -->
+       <div class="btn">
+      <a id="scroll-btn" href="#ctn"></a>
+       </div>
+      <!-- <img src="img/works/personality/cover.png"> -->
+        <!-- word  -->
+        <div class="top-section">
+         <div class="main">
+            <h1 class="header-1">Deconstruction of Personality</h1>
+            <h2>A coding project of p5.js</h2>
+         </div>
+        </div>
+   </section>   
+
+
+   <section class="container">
+      <div class="other-section">
+<hr id="ctn">
+      <div style="height: 5rem;"></div>
+
+    <div class="p" style="width: 100%">Lorem ipsum dolor sit amet, probo oporteat mediocritatem nam ex, sed dicta vivendum concludaturque ex. Ei nibh modus laudem cum, mei euismod atomorum te. Et nec congue quaerendum, ius no aperiam platonem democritum. Commune definiebas definitiones ad quo, omnis justo no nec. Dicat deserunt cu sea, usu ne dictas melius corrumpit.
+
+    At adhuc offendit cum, vix discere eripuit dissentias te. Id his nostrum repudiare, pro an solum forensibus voluptatum. Mei cu dolorum admodum disputationi. Audiam incorrupte nam ea, pri cu quod denique eligendi, pri ad conceptam temporibus. Qui paulo prompta aliquid ea, ea blandit lobortis partiendo mea.</div>
+
+
+      <div class="images clearfix">
+         <img src="img/demo.jpg">
+         <img src="img/works/personality/cover.png">
+      </div>
+
+    <div class="p" style="width: 100%">Lorem ipsum dolor sit amet, probo oporteat mediocritatem nam ex, sed dicta vivendum concludaturque ex. Ei nibh modus laudem cum, mei euismod atomorum te. Et nec congue quaerendum, ius no aperiam platonem democritum. Commune definiebas definitiones ad quo, omnis justo no nec. Dicat deserunt cu sea, usu ne dictas melius corrumpit.
+
+    At adhuc offendit cum, vix discere eripuit dissentias te. Id his nostrum repudiare, pro an solum forensibus voluptatum. Mei cu dolorum admodum disputationi. Audiam incorrupte nam ea, pri cu quod denique eligendi, pri ad conceptam temporibus. Qui paulo prompta aliquid ea, ea blandit lobortis partiendo mea.</div>
+          
+      <h1 style="padding-top: 160px;">DEMO</h1>
+<div class="divider"></div>
+Need to turn on the camera
+<iframe src="https://editor.p5js.org/z1068969/full/291coQCJW" style="width: 510px; height: 680px; margin: 40px auto;"></iframe>
+
+      <div style="height: 10rem;"></div>
+
+
+</section>
+
+
+<section class="select clearfix">
+<div class="selectcontainer clearfix">
+
+   <div class="previous left">
+      <a href="https://www.douban.com">
+      <img src="img/icon/arrow-left.svg" class="left clearfix">
+      <div class="right clearfix">
+      <p style="margin-left: 15px; font-size: 15px;">Previous</p>
+      <p style="margin-left: 15px; font-size: 45px;">ABCD</p>
+      </div>
+      </a>
+   </div>
+
+
+   <div class="next right">
+      <a href="https://www.gcores.com">
+      <img src="img/icon/arrow-right.svg" class="right clearfix">
+      <div class="left clearfix">
+      <p style="margin-right: 15px; font-size: 15px;">Next</p>
+      <p style="margin-right: 15px; font-size: 45px;">EFGH</p>
+      </div>
+      </a>   
+   </div>
+</div>
+
+</section>
+</div>
+</body>
+
+
+<footer>
+      <div class="container clearfix">
+         <div class="copyright left">
+            <p>
+               @ 2024 Elena Cao
+            </p>
+         </div>
+         <div class="contact right">
+            <ul>
+               <li><a href=""><svg class="icon" aria-hidden="true"><use xlink:href="#icon-instagram"></use></svg></a></li>
+               <li><a href=""><svg class="icon" aria-hidden="true"><use xlink:href="#icon-wechat"></use></svg></a></li>
+               <li><a href=""><svg class="icon" aria-hidden="true"><use xlink:href="#icon-behance-square"></use></svg></a></li>
+               <li><a href=""><svg class="icon" aria-hidden="true"><use xlink:href="#icon-mail"></use></svg></a></li>
+            </ul>           
+         </div>
+      </div>
+</footer> 
+    
+
+    <script type="text/javascript">
+    
+        //scroll change the header(nav)
+        
+      window.addEventListener("scroll", function(){
+       var header = document.querySelector("header");
+       header.classList.toggle("sticky", window.scrollY > 0);
+      })
+    </script>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    
+    <script>
+        //top-section words animation
+
+    var tl = new TweenMax.staggerFrom(".menu > div", 1, {
+        opacity: 0,     
+        y: 30,
+        ease: Expo.easeInOut,
+        delay: 0.6
+    }, 0.1);
+        
+    var tl = new TweenMax.staggerFrom(".main > h1,h2", 1, {
+        opacity: 0,     
+        x: 30,
+        ease: Expo.easeInOut,
+        delay: 0.6
+    }, 0.1);
+
+    var tl = new TweenMax.staggerFrom(".btn > a", 1, {
+        opacity: 0,     
+        y: -30,
+        ease: Expo.easeInOut,
+        delay: 0.6
+    }, 0.1);
+
+    </script>
+</html>

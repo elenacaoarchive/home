@@ -1,0 +1,342 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url(font/PPNeueMontreal-Book.otf);
+  font-weight: normal;
+}
+
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url(font/PPNeueMontreal-Medium.otf);
+  font-weight: bold;
+}
+
+
+
+*
+{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Neue Montreal",sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* common */
+
+h1 {
+  font-size: 60px;
+/*  padding-top: 160px;*/
+  
+}
+
+.h2 {
+  font-size: 26px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.grey {
+  color: grey;
+}
+
+span {
+/*  position: absolute;
+  left: 50%;
+  top: 50%;*/
+    background-color: #F7EEE7;
+    color: #000;
+    font-size: 15px;
+    padding: 4px 5px;
+    border: 1px solid;
+    font-family: monospace;
+    font-style: italic;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#plogo:hover span {
+  visibility: visible;
+  opacity: 1;
+}
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*  common  */
+
+
+/* nav  */
+
+header{
+  height: 90px;
+  padding-top: 1.2rem;
+
+  transition: all 0.2s ease-in-out;
+
+  backdrop-filter: blur(16px);  
+
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+nav {
+  width: 1100px;
+  margin: 0 auto;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.header .logo {
+    margin-top: 20px; 
+}
+
+.header .logo a{
+    font-size: 22px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.header .link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.link ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 15px 0px;
+  margin: 10px 0 10px 15px;
+  font-size: 18px;
+}
+
+li a{
+  padding: 5px 5px;
+  border-radius: 6px;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+}
+
+header.sticky {
+  height: 60px;
+  padding-top: 0px;
+    background-color: rgba(255, 255, 255, 0.8);
+  border-style: none none solid none;
+  border-width: thin;
+  border-color: #7B7B7B;
+}
+
+
+li a:hover{
+  border-radius: 6px;
+  background-color: #000;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+
+/* header  */
+
+/* body */
+
+body
+{
+  dispaly:flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+
+  font-size: 18px;
+
+}
+
+.divider {
+  width: 0;
+  height: 1px;
+  background: #000;
+  transition: width 1s ease-in-out;
+  margin: 12px auto;
+}
+
+
+.background {
+  height: 100vh;
+  background-color: #F7EEE7;
+  z-index: -1;
+}
+
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.section {
+  width: 100%;
+  margin: 12rem auto;
+}
+
+.in-view {
+/*  border: 10px solid red;*/
+  animation: fade 0.6s 0.6s both;
+}
+
+.not-in-view {
+  opacity: 0;
+}
+
+.images {
+  margin: 0 auto;
+}
+
+img {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  height: auto;
+  /* height: 350px; width: 1100px */
+}
+
+
+.row {
+
+  display: flex;
+  margin: 20px auto;
+/*  justify-content: space-between;*/
+}
+
+.leftpart {
+  width: 50%;
+}
+
+.rightpart {
+  width: auto;
+}
+
+
+
+
+:root {
+  --scroll: 0;
+}
+
+/* body */
+
+
+
+
+/* footer */
+
+
+footer {
+  height: 90px;
+  padding-top: 1.4rem;
+  background-color: rgb(38, 51, 123);
+}
+
+footer .copyright{
+  font-size: 18px;
+  color: white;
+}
+
+footer .contact{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact ul li{
+  list-style: none;
+  display: inline-block;
+  padding-left:15px;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  fill: white;
+  overflow: hidden;
+}
+
+/* footer */
+
+
+
+
+
+/* media queries  */
+
+@media (width <= 900px) {
+    .container{   
+        width: calc(100% - 48px);
+        margin-left: 24px;
+        margin-right: 24px
+    }
+    h1 {
+    	font-size: 34px;
+    }
+    .h2 {
+    	font-size: 18px;
+    }
+    .section {
+    width: 100%;
+    margin: 8rem auto;
+    }
+    .icon {
+    width: 18px;
+    height: 18px;
+    }
+    .contact ul li{
+    padding-left:0;
+    }
+}
+
+
