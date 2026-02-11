@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio ｜ Peiyao Cao</title>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.ico">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="script.js" defer></script>
     <script src="fadein.js" defer></script>
@@ -48,13 +48,16 @@
             <div class="logo left">
                <h2><a href="#">PEIYAO CAO</a></h2>
             </div>
+        
 
             <div class="link right">
-                <ul>
+                <div class="menu-overlay">
+                <ul class="nav-menu">
                    <li><a href="#">Home</a></li>
                    <li><a href="#project">Works</a></li>
                    <li><a href="about.html">About</a></li>
                 </ul>
+                </div>
             </div>
         </nav>
     </header>
@@ -73,6 +76,7 @@
             <div class="main">
                 <h1 class="header-1">Hi, I'm</h1>
                 <h1 class="header-2">Peiyao Cao</h1>
+                <h2 class="header-3">You can call me Elena</h2>
             </div>
         </div>
 
@@ -81,14 +85,19 @@
     <section class="container" id="ctn">
         <div class="other-section">
             <div style="height: 5rem;"></div>
-                
+            <div class="h2" style="margin: 20px auto; font-size: 26px;">I'm an industrial design student, keen to explore interactive and service design.</div>
+            
+            <div class="h2" style="margin: 20px auto; font-size: 26px;">My exploration of technology and design began in middle school—I'd be happy to share that story! I am dedicated to creating enjoyable experiences.</div>
+            
+            <!--    
                 Lorem ipsum dolor sit amet, probo oporteat mediocritatem nam ex, sed dicta vivendum concludaturque ex. Ei nibh modus laudem cum, mei euismod atomorum te. Et nec congue quaerendum, ius no aperiam platonem democritum. Commune definiebas definitiones ad quo, omnis justo no nec. Dicat deserunt cu sea, usu ne dictas melius corrumpit.
 
                 At adhuc offendit cum, vix discere eripuit dissentias te. Id his nostrum repudiare, pro an solum forensibus voluptatum. Mei cu dolorum admodum disputationi. Audiam incorrupte nam ea, pri cu quod denique eligendi, pri ad conceptam temporibus. Qui paulo prompta aliquid ea, ea blandit lobortis partiendo mea.
 
           <div class="image clearfix">
              <img src="img/demo.jpg">
-          </div>
+            </div>
+            -->
 
           <div style="height: 1rem;"></div>
 
@@ -105,7 +114,7 @@
              <img src="img/1.jpg">
 
              <p class="left">An Autonomous Shared Vehicle</p>
-             <a href="AirLink.html"><button class="right">► view this project</button></a>
+             <a href="AirLink.html"><button class="right">► View This Project</button></a>
           </div>
         </div>
 
@@ -116,7 +125,7 @@
              <img src="img/2.jpg">
 
              <p class="left">An interactive sensory stimulator (with Arduino)</p>
-             <a href="When Skin Seeks Relief.html"><button class="right">► view this project</button></a>
+             <a href="When Skin Seeks Relief.html"><button class="right">► View This Project</button></a>
           </div>
         </div>
 
@@ -127,7 +136,7 @@
              <img src="img/3.jpg">
 
              <p class="left">An Interactive Narrative-driven Game</p>
-             <a href="Imaginary Friend.html"><button class="right">► view this project</button></a>
+             <a href="Imaginary Friend.html"><button class="right">► View This Project</button></a>
           </div>
         </div>
         
@@ -144,15 +153,21 @@
          </div>
          <div class="contact right">
             <ul>
+<!--
                <li><a href=""><svg class="icon" aria-hidden="true"><use xlink:href="#icon-instagram"></use></svg></a></li>
                <li><a href=""><svg class="icon" aria-hidden="true"><use xlink:href="#icon-wechat"></use></svg></a></li>
                <li><a href=""><svg class="icon" aria-hidden="true"><use xlink:href="#icon-behance-square"></use></svg></a></li>
-               <li><a href=""><svg class="icon" aria-hidden="true"><use xlink:href="#icon-mail"></use></svg></a></li>
+ -->
+               <li><a href="mailto:elenacao1215@163.com"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-mail"></use></svg></a></li>
             </ul>           
          </div>
       </div>
-</footer> 
-
+</footer>
+        
+        
+        
+        
+        
 
     <script type="text/javascript">
 
@@ -208,6 +223,20 @@
     anime.timeline()
     .add({
         targets: '.header-2 .letter',
+        translateY: [100,0],
+        translateZ: 0,
+        opacity: [0,1],
+        easing: "easeOutExpo",
+        duration: 2000,
+        delay: (el, i) => 3600 + 50 * i
+    });
+
+    var textWrapper = document.querySelector('.header-3');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline()
+    .add({
+        targets: '.header-3 .letter',
         translateY: [100,0],
         translateZ: 0,
         opacity: [0,1],
@@ -277,6 +306,8 @@
     });
     });
 
+        
+    
 
 
     </script>
